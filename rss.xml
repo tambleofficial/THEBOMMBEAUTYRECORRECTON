@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>THE BOMM BEAUTY RE:CORRECTION</title>
+  <link>https://thebommbeautyrecorrecton.pages.dev/</link>
+  <atom:link href="https://thebommbeautyrecorrecton.pages.dev/rss.xml" rel="self" type="application/rss+xml"/>
+  <description>기존 반영구의 잔흔, 색감, 형태가 고민이라면. 더봄뷰티 리커렉션은 현재 남아 있는 상태를 먼저 확인하고 가능한 디자인 방향을 상담합니다. 경기 수원시 팔달구.</description>
+  <language>ko-KR</language>
+  <lastBuildDate>Thu, 12 Nov 2026 09:00:00 +0900</lastBuildDate>
+  <item>
+    <title>RE:CORRECTION · 리커렉션</title>
+    <link>https://thebommbeautyrecorrecton.pages.dev/#/recorrection</link>
+    <guid isPermaLink="true">https://thebommbeautyrecorrecton.pages.dev/#/recorrection</guid>
+    <description>새로 그리기 전에, 남아 있는 것부터 봅니다. 상태별 확인 항목과 상담 과정 안내.</description>
+    <pubDate>Thu, 12 Nov 2026 09:00:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>PORTFOLIO · 포트폴리오</title>
+    <link>https://thebommbeautyrecorrecton.pages.dev/#/portfolio</link>
+    <guid isPermaLink="true">https://thebommbeautyrecorrecton.pages.dev/#/portfolio</guid>
+    <description>눈썹 · 아이라인 · 입술 리커렉션 실제 사례 사진.</description>
+    <pubDate>Thu, 12 Nov 2026 09:00:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>CASE LAB · 실제 사례</title>
+    <link>https://thebommbeautyrecorrecton.pages.dev/#/caselab</link>
+    <guid isPermaLink="true">https://thebommbeautyrecorrecton.pages.dev/#/caselab</guid>
+    <description>사례마다 무엇을 먼저 확인했고 어떤 방향을 상담했는지 기록합니다.</description>
+    <pubDate>Thu, 12 Nov 2026 09:00:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>DIRECTOR · 대표원장</title>
+    <link>https://thebommbeautyrecorrecton.pages.dev/#/director</link>
+    <guid isPermaLink="true">https://thebommbeautyrecorrecton.pages.dev/#/director</guid>
+    <description>장형겸 대표원장의 상담 기준과 이력.</description>
+    <pubDate>Thu, 12 Nov 2026 09:00:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>CONSULT · 상담 안내</title>
+    <link>https://thebommbeautyrecorrecton.pages.dev/#/consult</link>
+    <guid isPermaLink="true">https://thebommbeautyrecorrecton.pages.dev/#/consult</guid>
+    <description>예전 작업 때문에 고민이라면, 메뉴보다 현재 상태부터 알려주세요. 경기 수원시 팔달구 팔달로 69 1동 403호.</description>
+    <pubDate>Thu, 12 Nov 2026 09:00:00 +0900</pubDate>
+  </item>
+</channel>
+</rss>

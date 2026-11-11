@@ -1,0 +1,112 @@
+# 더봄뷰티 리커렉션 Pages CMS 설정
+# 화면 문구·사진 수정은 편집 모드(/edit)에서, 목록 추가·삭제(포트폴리오·후기)와 기본정보는 여기서 해요.
+
+media:
+  - name: images
+    label: "사진"
+    input: images
+    output: /images
+    rename: safe
+    extensions: [jpg, jpeg, png, webp]
+
+content:
+  - name: site
+    label: "기본정보 (연락처·주소)"
+    type: file
+    path: content/site.json
+    format: json
+    fields:
+      - name: name
+        label: "상호"
+        type: string
+      - name: brand
+        label: "영문 상호"
+        type: string
+      - name: owner
+        label: "대표자"
+        type: string
+      - name: phone
+        label: "전화번호"
+        type: string
+        description: "예: 010-1234-5678 (전화 버튼 링크도 자동으로 바뀌어요)"
+      - name: naver_place_url
+        label: "네이버 플레이스 링크"
+        type: string
+      - name: instagram_url
+        label: "인스타그램 링크"
+        type: string
+      - name: instagram_id
+        label: "인스타그램 아이디"
+        type: string
+      - name: youtube_url
+        label: "유튜브 링크"
+        type: string
+      - name: youtube_id
+        label: "유튜브 아이디"
+        type: string
+      - name: address
+        label: "주소"
+        type: string
+  - name: portfolio
+    label: "포트폴리오 사진"
+    type: file
+    path: content/portfolio.json
+    format: json
+    fields:
+      - name: items
+        label: "사진 목록"
+        type: object
+        description: "같은 고객의 실제 전후 사진만 올려주세요. 순서대로 9장씩 한 페이지에 보여요."
+        list:
+          max: 200
+          collapsible:
+            collapsed: true
+            summary: "{index}. {cat}"
+        fields:
+          - name: image
+            label: "사진"
+            type: image
+            options:
+              media: images
+          - name: cat
+            label: "분류"
+            type: select
+            options:
+              values: ["EYEBROW", "EYELINE", "LIP"]
+  - name: reviews
+    label: "고객 후기"
+    type: file
+    path: content/reviews.json
+    format: json
+    fields:
+      - name: items
+        label: "후기 목록"
+        type: object
+        list:
+          max: 30
+          collapsible:
+            collapsed: true
+            summary: "{index}. {who} · {meta}"
+        fields:
+          - name: cat
+            label: "분류"
+            type: select
+            options:
+              values: ["EYEBROW", "EYELINE", "LIP"]
+          - name: who
+            label: "고객 이름 (가려서)"
+            type: string
+          - name: meta
+            label: "시술·고민 (예: 눈썹 리커렉션 · 붉은 잔흔)"
+            type: string
+          - name: before
+            label: "받기 전 고민"
+            type: text
+          - name: after
+            label: "받은 뒤 이야기"
+            type: text
+          - name: image
+            label: "사진"
+            type: image
+            options:
+              media: images

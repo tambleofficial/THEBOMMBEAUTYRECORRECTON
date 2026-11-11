@@ -517,7 +517,7 @@
       [
         "COLOR REMAINS",
         "색 잔흔",
-        "색만 보고 판단하지 않고 남아 있는 위치와 형태, 현재 피부 상태를 함께 확인합니다.",
+        "색만 보고 판단하지 않고 남아 있는 위치와 형태, 현재 피부 상태를 함께 확인합니다. (편집 모드 테스트)",
         [
           "붉은 계열",
           "회색 계열",
@@ -761,7 +761,7 @@
     "rc2-guide-4": "/images/slots/rc2-guide-4.webp",
     "rc2-guide-5": "/images/slots/rc2-guide-5.webp",
     "rc2-guide-6": "/images/slots/rc2-guide-6.webp",
-    "rc2-case-red": "/images/slots/rc2-case-red.webp",
+    "rc2-case-red": "/assets/uploads/20261112015502-kk7rr.jpg",
     "rc2-case-shape": "/images/slots/rc2-case-shape.webp",
     "rc2-case-asy": "/images/slots/rc2-case-asy.webp",
     "rc2-case-multi": "/images/slots/rc2-case-multi.webp"

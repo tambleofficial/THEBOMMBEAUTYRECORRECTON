@@ -49,6 +49,7 @@ content:
         type: string
   - name: portfolio
     label: "포트폴리오 사진"
+    description: "같은 고객의 실제 전후 사진만 올려주세요. 위에서부터 순서대로 9장씩 한 페이지에 보여요."
     type: file
     path: content/portfolio.json
     format: json
@@ -56,7 +57,6 @@ content:
       - name: items
         label: "사진 목록"
         type: object
-        description: "같은 고객의 실제 전후 사진만 올려주세요. 순서대로 9장씩 한 페이지에 보여요."
         list:
           max: 200
           collapsible:

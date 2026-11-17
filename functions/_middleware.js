@@ -32,8 +32,10 @@ export function fill(html, key, data) {
 }
 
 export async function onRequest(ctx) {
-  const res = await ctx.next();
   const url = new URL(ctx.request.url);
+  const subKey = url.pathname.replace(/^\/+|\/+$/g, '');
+  // 세부 페이지(/portfolio 등)는 같은 화면(index.html)을 받아서 제목·설명만 바꿔 보냅니다.
+  const res = SUB_META[subKey] ? await ctx.env.ASSETS.fetch(new URL('/', url)) : await ctx.next();
   const type = res.headers.get('content-type') || '';
   if (!type.includes('text/html') || url.pathname.startsWith('/edit') || url.pathname.startsWith('/api/')) return res;
   const key = url.pathname.replace(/^\/+|\/+$/g, '').replace(/\.html$/, '');

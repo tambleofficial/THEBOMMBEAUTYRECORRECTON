@@ -1122,8 +1122,11 @@ class Component extends DCLogic {
   state = { fabOpen: false, scrolled: false, page: 'home', tone: 'hero', mobile: false, narrow: false, menuOpen: false, hookOpen: 0, guideSel: 0, faqOpen: 0, storyCat: 'ALL' };
 
   componentDidMount() {
-    const h = (location.hash || '').replace('#/', '');
+    const seg0 = location.pathname.replace(/^\/+|\/+$/g, '').split('/')[0];
+    const h = PAGES.includes(seg0) ? seg0 : (location.hash || '').replace('#/', '');
     if (PAGES.includes(h) && h !== 'home') this.setState({ page: h });
+    this.onPop = () => { const s = location.pathname.replace(/^\/+|\/+$/g, '').split('/')[0]; const p = PAGES.includes(s) ? s : 'home'; if (p !== this.state.page) { this.setState({ page: p }); scrollTo(0, 0); } };
+    if (!/^\/edit/.test(location.pathname)) addEventListener('popstate', this.onPop);
     this.onResize = () => { const m = innerWidth < 760, n = innerWidth < 1100; if (m !== this.state.mobile || n !== this.state.narrow) this.setState({ mobile: m, narrow: n }); };
     this.onResize();
     addEventListener('resize', this.onResize);
@@ -1163,7 +1166,8 @@ class Component extends DCLogic {
     const pt = document.querySelector('[data-pt]');
     const swap = () => {
       this.setState({ page });
-      history.replaceState(null, '', page === 'home' ? location.pathname + location.search : '#/' + page);
+      if (/^\/edit/.test(location.pathname)) history.replaceState(null, '', page === 'home' ? location.pathname + location.search : '#/' + page); else history.pushState(null, '', page === 'home' ? '/' : '/' + page);
+      const TT = {"recorrection":"RE:CORRECTION 리커렉션 · 상태별 안내 | 더봄뷰티 리커렉션","portfolio":"PORTFOLIO 포트폴리오 | 더봄뷰티 리커렉션","caselab":"CASE LAB 실제 사례 | 더봄뷰티 리커렉션","director":"DIRECTOR 대표원장 | 더봄뷰티 리커렉션","consult":"CONSULT 상담 안내 | 더봄뷰티 리커렉션"}; document.title = TT[page] || 'THE BOMM BEAUTY RE:CORRECTION';
       scrollTo(0, 0);
       pt && pt.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 460, easing: 'ease-out', fill: 'forwards' });
     };
